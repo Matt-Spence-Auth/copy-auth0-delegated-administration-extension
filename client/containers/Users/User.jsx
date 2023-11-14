@@ -75,7 +75,7 @@ export default connectContainer(class extends Component {
         <TabsHeader role={role} languageDictionary={languageDictionary} />
         <div className="row content-header">
           <div className="col-xs-12">
-            <h1 className="pull-left">{languageDictionary.userTitle || 'User Details'}</h1>
+            <h1 className="pull-left">TEST USER DETAIL</h1>
             <div className="pull-right">
               <UserActions
                 role={role}
