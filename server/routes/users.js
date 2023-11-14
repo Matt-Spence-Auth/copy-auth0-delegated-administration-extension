@@ -529,6 +529,7 @@ export default (storage, scriptManager) => {
    * Get all logs for a user.
    */
   api.get('/:id/logs', verifyUserAccess('read:logs', scriptManager), (req, res, next) => {
+    console.log("GET ALL LOGS");
     getApiToken(req)
       .then((accessToken) => {
         const options = {
