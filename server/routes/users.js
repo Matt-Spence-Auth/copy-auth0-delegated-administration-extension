@@ -228,6 +228,7 @@ export default (storage, scriptManager) => {
    * Get a single user.
    */
   api.get('/:id', verifyUserAccess('read:user', scriptManager), (req, res, next) => {
+    console.log("GET SINGLE USER");
     const user = req.targetUser;
     const membershipContext = {
       request: {
