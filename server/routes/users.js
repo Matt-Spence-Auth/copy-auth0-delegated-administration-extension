@@ -228,7 +228,6 @@ export default (storage, scriptManager) => {
    * Get a single user.
    */
   api.get('/:id', verifyUserAccess('read:user', scriptManager), (req, res, next) => {
-    console.log("GET SINGLE USER");
     const user = req.targetUser;
     const membershipContext = {
       request: {
@@ -318,6 +317,8 @@ export default (storage, scriptManager) => {
         logger.error('Failed to get user because: ', err);
         next(err);
       });
+      console.log("GET SINGLE USER");
+
   });
 
   /*
